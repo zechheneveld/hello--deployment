@@ -3,6 +3,7 @@ package com.example.demo;
 import java.time.LocalTime;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,4 +15,7 @@ public class DataController {
 	public String getTime() {
 		return "The Current Time Is: " + LocalTime.now().toString();
 	}
+	@GetMapping("{:name}")
+	public String sayHello(@PathVariable String name) {
+		return "Hello "	+ name}
 }
