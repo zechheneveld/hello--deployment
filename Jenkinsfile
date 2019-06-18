@@ -9,10 +9,11 @@ pipeline {
 			stage('Test') {
 				steps {
 					sh 'mvn test'
+				}
 			}
 			stage('Build') {
 				steps {
-					sh './mvnw install dockerfile:build'
+					sh 'mvn install dockerfile:build'
 			}
 		}
 	}			
