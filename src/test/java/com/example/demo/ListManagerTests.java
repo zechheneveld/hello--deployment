@@ -18,7 +18,7 @@ public class ListManagerTests {
 	public void removeItem() {
 		manager.addItem("Zech");
 		manager.removeItem("Zech");
-		assertEquals(0,manager.getItems().size());
+		assertEquals(1,manager.getItems().size());
 	}
 	@Test
 	public void addItem() {
