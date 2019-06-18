@@ -17,7 +17,7 @@ public class ListManager {
 	public void removeItem(String item) {
 		
 	}
-	public List<String> getItem(){
+	public List<String> getItems(){
 		return this.items;
 	}
 
