@@ -14,12 +14,12 @@ pipeline {
 			stage('Build') {
 				steps {
 					sh 'mvn install dockerfile:build'
+				}
 			}
-		}
 			stage('Publish'){
 				steps{
 					sh 'docker push zechheneveld/hello-deployment:latest'
 				}
 			}
-	}			
-}
+		}			
+	}
