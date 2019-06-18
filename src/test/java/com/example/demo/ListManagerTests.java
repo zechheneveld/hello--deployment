@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +13,7 @@ public class ListManagerTests {
 	public void startUp() {
 		manager = new ListManager();
 	}
-	
+
 	@Test
 	public void removeItem() {
 		manager.addItem("Zech");
@@ -20,6 +22,8 @@ public class ListManagerTests {
 	}
 	@Test
 	public void addItem() {
-		
+		manager.addItem("Zech");
+		assertEquals(1,manager.getItems().size());
 	}
+
 }
